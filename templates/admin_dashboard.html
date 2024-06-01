@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        background-image: url("/static/isc-front.jpg");
+        background-size: 100vw 100vh;
+        /* background-size: cover; Adjust the percentage to compress or scale down the image */
+        background-repeat: no-repeat;
+      }
+
+      .dashboard-container {
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .dashboard-button {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #3498db;
+        border: 1px solid #2980b9;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff;
+        display: block;
+        width: 150px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .dashboard-button:hover {
+        background-color: #2980b9;
+      }
+
+      h1 {
+        color: black;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <h1>Admin Dashboard</h1>
+
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <a href="{{ url_for('view_data') }}" class="dashboard-button"
+          >View Data</a
+        >
+        <a href="{{ url_for('add_admin') }}" class="dashboard-button"
+          >Add Admin</a
+        >
+        <a href="{{ url_for('add_slot_page') }}" class="dashboard-button"
+          >Add Slots</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
